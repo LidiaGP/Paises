@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="12dp"
+    >
+
+    <Button
+        android:id="@+id/btn_añadir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="añadir"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:layout_toRightOf="@id/btn_añadir"
+        android:layout_alignParentTop="true"
+        />
+
+    <Button
+        android:id="@+id/btn_borrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Borrar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_borrar"
+        android:orientation="horizontal">
+
+
+        <EditText
+            android:id="@+id/ed_codigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:ems="4"
+            android:hint="COD"
+            android:inputType="textPersonName"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/ed_pais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="12"
+            android:inputType="textPersonName"
+            android:text=""
+            android:hint="PAIS"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
